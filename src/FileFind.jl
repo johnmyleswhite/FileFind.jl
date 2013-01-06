@@ -1,5 +1,5 @@
 module FileFind
 	using Base
 
-	load("FileFind/src/find.jl")
+	include(joinpath(julia_pkgdir(), "FileFind", "src", "find.jl"))
 end

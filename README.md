@@ -8,7 +8,7 @@ This package provides a single function, `FileFind.find`, which:
 
 # Usage Examples
 
-    load("FileFind")
+    require("FileFind")
 
     # The simplest scenario possible
     FileFind.find()

@@ -3,12 +3,12 @@ function find{T <: String}(dirname::T, f::Function)
     error("find() can only be called on directories")
   end
 
-  starting_dir = cwd()
+  starting_dir = pwd()
 
   cd(dirname)
 
   for filename in readdir(".")
-    f(abs_path(filename))
+    f(abspath(filename))
     if isdir(filename) && !islink(filename)
       find(filename, f)
     end
@@ -17,6 +17,6 @@ function find{T <: String}(dirname::T, f::Function)
   cd(starting_dir)
 end
 
-find{T <: String}(dirname::T) = find(dirname, println)
+find(dirname::String) = find(dirname, println)
 find(f::Function) = find(".", f)
 find() = find(".", println)

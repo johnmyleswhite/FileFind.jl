@@ -1,4 +1,4 @@
-load("FileFind")
+require("FileFind")
 
 # The simplest scenario possible
 FileFind.find()
