@@ -1,4 +1,4 @@
-function find{T <: String}(dirname::T, f::Function)
+function find(dirname::String, f::Function)
   if !isdir(dirname)
     error("find() can only be called on directories")
   end
