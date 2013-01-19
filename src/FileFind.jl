@@ -1,3 +1,3 @@
 module FileFind
-	include(joinpath(julia_pkgdir(), "FileFind", "src", "find.jl"))
+	include("find.jl")
 end
